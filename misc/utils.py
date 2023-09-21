@@ -98,7 +98,7 @@ def logger(exp_path, exp_name, work_dir, exception, resume=False):
     writer = SummaryWriter(exp_path+ '/' + exp_name)
     log_file = exp_path + '/' + exp_name + '/' + exp_name + '.txt'
     
-    cfg_file = open('/home/zcy/cell_localization/IIM-main-modified/config.py',"r")  
+    cfg_file = open('./config.py',"r")  
     cfg_lines = cfg_file.readlines()
     
     with open(log_file, 'a') as f:
