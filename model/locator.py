@@ -59,36 +59,4 @@ if __name__ == '__main__':
     import torch
     from torchsummary import summary
     import torch.nn.functional as F
-    # model = Res_FPN().cuda()
-    # predict = torch.load('/media/D/ht/Crowd_loc_master/exp/09-17_10-54_JHU_NWPU_Res50_SCAR_1e-05/all_ep_16_mae_3825.0_mse_8343.1_nae_12.509.pth')
-    # model.load_state_dict(predict)
-    # img = torch.ones(1,3,80,80).cuda()
-    # gt =  torch.ones(1,1,80,80).cuda()
-    # out = model(img,gt)
-    # print(out)
-    # input = torch.zeros(2,100)+0.0001
-    # target = torch.ones(2,100)
-    # loss = F.binary_cross_entropy(input,target)
-    # print(loss)
-    # model = Res_FPN(pretrained = False).cuda()
-    # summary(model,(3,24,24))
-
-    # import torch
-    # import torch.nn as nn
-    #
-    # N, C_in, H, W, C_out = 10, 4, 16, 16, 4
-    # x = torch.randn(N, C_in, H, W).float()
-    # conv = nn.Sequential(
-    #     nn.Conv2d(4, 8, kernel_size=3, stride=3, padding=1, bias=False),
-    #     nn.Conv2d(8, 4, kernel_size=3, stride=3, padding=1, bias=False))
-    # conv_group = nn.Sequential(
-    #     nn.Conv2d(4, 8, kernel_size=3, stride=3, padding=1, groups=4, bias=False),
-    #     nn.Conv2d(8, 4, kernel_size=3, stride=3, padding=1, groups=4, bias=False)
-    # )
-    #
-    # y = conv(x)
-    # y_group = conv_group(x)
-    # conv_1x1 = nn.Conv2d(C_in, C_out, kernel_size=1)
-    # print("groups=1时参数大小：%d" % sum(param.numel() for param in conv.parameters()))
-    # print("groups=in_channels时参数大小：%d" % sum(param.numel() for param in conv_group.parameters()))
-    # print(y_group.size())
+   
