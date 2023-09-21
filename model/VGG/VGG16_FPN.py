@@ -3,7 +3,6 @@ import sys
 import torch.nn.functional as F
 import torch.nn as nn
 import sys
-sys.path.append('/home/zcy/CrowdCounting/IIM-main/')
 from misc.utils import *
 import numpy as np
 import os
@@ -193,10 +192,5 @@ class Conv2d(nn.Module):
         return x
 
 if __name__ == "__main__":
-
-
     net = VGG16_FPN(pretrained=False).cuda()
     print(net)
-    # summary(net,(3,64 ,64 ),batch_size=1)
-    out = net(torch.rand(1,3,64,64).cuda())
-    print(out.size())
